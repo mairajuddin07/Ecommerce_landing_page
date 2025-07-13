@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrendsVista - eCommerce Store</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="main.js" defer></script>
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">TrendsVista</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Catalog</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Men</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Shoes</a></li>
+            <li><a class="dropdown-item" href="#">Watch</a></li>
+            <li><a class="dropdown-item" href="#">Trousers</a></li>
+            <li><a class="dropdown-item" href="#">T-shirts</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown">Women</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <li><a class="dropdown-item" href="#">Sneakers</a></li>
+            <li><a class="dropdown-item" href="#">Watch</a></li>
+            <li><a class="dropdown-item" href="#">Heels</a></li>
+            <li><a class="dropdown-item" href="#">Jewelries</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Feedback</a></li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- Carousel -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/black-friday.jpg" class="d-block w-100" alt="black-friday banner">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Black Friday</h5>
+        <p>We have 50% off on all Products</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/market-bnr.jpg" class="d-block w-100" alt="market banner">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>General Store</h5>
+        <p>We have all general items</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/supermarket.jpg" class="d-block w-100" alt="supermarket">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Visit Store</h5>
+        <p>Our physical store is now open</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Product Grid Section -->
+<section class="product-grid-section py-5">
+  <div class="container">
+    <h2 class="text-center text-white mb-5">Featured Products</h2>
+    <div class="row g-4">
+      <!-- Start 24 product cards -->
+      <!-- Loop or copy this block 24 times; change image/title/price each -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/sparkling-wine-1.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">sparkling-wine</h5>
+          <p class="product-price text-light">Rs. 33,499</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light" onclick="viewProduct('sparkling-wine', 'Rs. 33,499', '/images/sparkling-wine-1.jpg', 'sparkling-wine for  mind refreshing')">View</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/kettle-1.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">Kettle</h5>
+          <p class="product-price text-light">Rs. 2,599</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+               <button class="btn btn-sm btn-light" onclick="viewProduct('Kettle', 'Rs. 25,99', '/images/kettle-1.jpg', 'Kettle is transparent and its good looking')">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/oxford-office-shoes.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">oxford-office-shoes</h5>
+          <p class="product-price text-light">Rs. 4599</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+               <button class="btn btn-sm btn-light" onclick="viewProduct('Oxford-office-shoes', 'Rs. 4599', '/oxford-office-shoes.jpg', 'Oxford oleather shoes is show off your personality')">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/sneakers-white.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">Sneakers</h5>
+          <p class="product-price text-light">Rs. 3399</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/male-watch-1.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">Sveston Watch</h5>
+          <p class="product-price text-light">Rs. 3999</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/male-watch-2.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">Elfa Watch</h5>
+          <p class="product-price text-light">Rs. 6699</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-1.jpg" class="img-fluid product-img mb-5" alt="Elegant Dress">
+          <h5 class="product-title text-white">Elegant Dress</h5>
+          <p class="product-price text-light">Rs. 3,499</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-2.jpg" class="img-fluid product-img mb-5" alt="Elegant Dress">
+          <h5 class="product-title text-white">Re-hold Belt</h5>
+          <p class="product-price text-light">Rs. 1999</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-3.jpg" class="img-fluid product-img mb-5" alt="Elegant Dress">
+          <h5 class="product-title text-white">Round-Cap</h5>
+          <p class="product-price text-light">Rs. 1499</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/wrist-watch-4.jpg" class="img-fluid product-img mb-4" alt="Elegant Dress">
+          <h5 class="product-title text-white">Health-update-watch</h5>
+          <p class="product-price text-light">Rs. 4999</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/wrist-watch.jpg" class="img-fluid product-img mb-5" alt="Elegant Dress">
+          <h5 class="product-title text-white">Leather-with silver</h5>
+          <p class="product-price text-light">Rs. 3,499</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/wristwatch-3.jpg" class="img-fluid product-img mb-2" alt="Elegant Dress">
+          <h5 class="product-title text-white">Darkish-watch</h5>
+          <p class="product-price text-light">Rs. 4799</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-4.jpg" class="img-fluid product-img mb-5" alt="Elegant Dress">
+          <h5 class="product-title text-white">Gold Jewelries</h5>
+          <p class="product-price text-light">Rs. 95,999</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-5.jpg" class="img-fluid product-img mb-5" alt="Elegant Dress">
+          <h5 class="product-title text-white">Red Dot Nechles</h5>
+          <p class="product-price text-light">Rs. 3,499</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-6.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">Sea-Stone nechles</h5>
+          <p class="product-price text-light">Rs. 3,299</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-7.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">Heart Nechless</h5>
+          <p class="product-price text-light">Rs. 3,599</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-9.jpg" class="img-fluid product-img mb-5" alt="Elegant Dress">
+          <h5 class="product-title text-white">White Jewelries</h5>
+          <p class="product-price text-light">Rs. 5,999</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-13.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">J. Shirt</h5>
+          <p class="product-price text-light">Rs. 2999</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-14.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">Zara' Full sleaves</h5>
+          <p class="product-price text-light">Rs. 3,499</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card p-3 text-center">
+          <img src="/images/product-img-15.jpg" class="img-fluid product-img mb-3" alt="Elegant Dress">
+          <h5 class="product-title text-white">Fabric shirt</h5>
+          <p class="product-price text-light">Rs. 3,499</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-sm btn-outline-light">Add to Cart</button>
+            <button class="btn btn-sm btn-light">View</button>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- End 24 product cards -->
+    </div>
+  </div>
+</section>
+
+<!-- Featured Cards -->
+<div class="card-section">
+  <h2 class="text-center text-white mb-5">Featured Collections</h2>
+  <div class="card-group d-flex flex-column flex-md-row justify-content-center">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Shoes">
+      <div class="card-body">
+        <h5 class="card-title">Stylish Sneakers</h5>
+        <p class="card-text">Comfort meets style in our latest sneaker collection.</p>
+        <button class="btn btn-custom">Shop Now</button>
+        <button class="btn btn-custom">Add to Cart</button>
+      </div>
+      <div class="card-footer"><small class="text-muted">Updated 2 hours ago</small></div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="images/wrist-watch.jpg" class="card-img-top" alt="Watches">
+      <div class="card-body">
+        <h5 class="card-title">Luxury Watches</h5>
+        <p class="card-text">Timeless design and precision craftsmanship in every timepiece.</p>
+        <button class="btn btn-custom">Shop Now</button>
+        <button class="btn btn-custom">Add to Cart</button>
+      </div>
+      <div class="card-footer"><small class="text-muted">Updated 1 day ago</small></div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="images/fragrance.jpg" class="card-img-top" alt="Fragrance">
+      <div class="card-body">
+        <h5 class="card-title">Fragrance</h5>
+        <p class="card-text">A whisper of blooming jasmine meets the warmth of sandalwood.</p>
+        <button class="btn btn-custom">Shop Now</button>
+        <button class="btn btn-custom">Add to Cart</button>
+      </div>
+      <div class="card-footer"><small class="text-muted">Updated 3 mins ago</small></div>
+    </div>
+  </div>
+</div>
+
+<!-- Categories Section -->
+<section class="categories-section py-5">
+  <div class="container">
+    <h2 class="text-center text-white mb-5">Shop by Categories</h2>
+    
+    <div class="row g-4 d-flex flex-wrap align-items-stretch">
+
+      <!-- Category 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="category-box text-center p-3">
+          <img src="/images/mens-collection-img.avif" alt="Men" class="img-fluid category-img mb-3">
+          <h5 class="category-title">Men's Collection</h5>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="category-box text-center p-3">
+          <img src="/images/women-fashion.jpg" alt="Women" class="img-fluid category-img mb-3">
+          <h5 class="category-title">Women's Fashion</h5>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="category-box text-center p-3">
+          <img src="/images/accessories.jpg" alt="Accessories" class="img-fluid category-img mb-3">
+          <h5 class="category-title">Accessories</h5>
+        </div>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="category-box text-center p-3">
+          <img src="/images/footwear.img" alt="Shoes" class="img-fluid category-img mb-3">
+          <h5 class="category-title">Footwear</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Why Shop With Us Section -->
+<section class="why-shop-section py-5">
+  <div class="container">
+    <h2 class="text-center text-white mb-5">Why Shop With TrendsVista?</h2>
+    <div class="row text-center g-4">
+      
+      <!-- Feature 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-box p-4">
+          <i class="bi bi-truck fs-1 text-white mb-3"></i>
+          <h5 class="text-white">Free Shipping</h5>
+          <p class="text-light small">On all orders above Rs. 2,000</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-box p-4">
+          <i class="bi bi-arrow-counterclockwise fs-1 text-white mb-3"></i>
+          <h5 class="text-white">Easy Returns</h5>
+          <p class="text-light small">No questions asked return policy</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-box p-4">
+          <i class="bi bi-headset fs-1 text-white mb-3"></i>
+          <h5 class="text-white">24/7 Support</h5>
+          <p class="text-light small">We’re always here to help</p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-box p-4">
+          <i class="bi bi-shield-lock fs-1 text-white mb-3"></i>
+          <h5 class="text-white">Secure Payments</h5>
+          <p class="text-light small">100% safe and secure checkout</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<!-- Footer Section -->
+<footer class="footer-section text-white pt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- About Us -->
+      <div class="col-md-3 mb-4">
+        <h5 class="footer-title">TrendsVista</h5>
+        <p class="footer-text">TrendsVista is your one-stop fashion destination for men, women, and accessories. We deliver style with quality and trust.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-3 mb-4">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service -->
+      <div class="col-md-3 mb-4">
+        <h5 class="footer-title">Customer Service</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-3 mb-4">
+        <h5 class="footer-title">Follow Us</h5>
+        <div class="social-icons d-flex gap-3">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <hr class="border-top border-light">
+    <p class="text-center mt-3 mb-0">&copy; 2025 TrendsVista. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

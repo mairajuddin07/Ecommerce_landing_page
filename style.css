@@ -1,0 +1,231 @@
+/* Navbar */
+.custom-navbar {
+  background: linear-gradient(gray, #070e16, rgb(71, 27, 27));
+}
+
+.navbar-brand,
+.nav-link,
+.dropdown-item {
+  color: white !important;
+}
+
+.nav-link,
+.dropdown-item {
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.dropdown-item:hover {
+  background-color: orangered !important;
+  color: white !important;
+  border-radius: 22px 0px 22px 0px;
+}
+
+.dropdown-menu {
+  background-color: #343a40;
+  border-radius: 10px;
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+/* Carousel Caption */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+/* Cards Section */
+.card-section {
+  background: linear-gradient(gray, #070e16, rgb(71, 27, 27));
+  padding: 50px 15px;
+}
+
+.card-group {
+  gap: 20px;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+}
+
+.card-footer {
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Custom Button */
+.btn-custom {
+  background: linear-gradient(gray, #070e16, rgb(71, 27, 27));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin: 5px 8px 0 0;
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: orangered;
+  color: white;
+}
+
+/* Footer */
+/* Categories Section Styling */
+/* Navbar Gradient Match */
+.categories-section {
+  background: linear-gradient(gray, #070e16, rgb(71, 27, 27)); /* same as your navbar gradient */
+}
+
+/* Card Design */
+.category-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  
+  /* Fix same height for all cards */
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover Effect */
+.category-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.category-img {
+  border-radius: 15px;
+  height: 220px;
+  object-fit: cover; /* updated from contain to cover for full fill */
+  width: 100%;
+}
+
+/* Title Styling */
+.category-title {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+/* Why Shop With Us Section */
+.why-shop-section {
+  background: linear-gradient(gray, #070e16, rgb(71, 27, 27));
+}
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+/* Product Grid Section */
+.product-grid-section {
+  background: linear-gradient(rgb(49, 12, 12), #070e16, rgb(71, 27, 27));
+}
+
+.product-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
+
+.product-img {
+  border-radius: 15px;
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.06);
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.product-price {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+  /* Footer Section */
+.footer-section {
+  background: linear-gradient(gray, #070e16, rgb(71, 27, 27));
+  color: #fff;
+}
+
+.footer-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffd700;
+}
